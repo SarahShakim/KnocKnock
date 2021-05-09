@@ -1,0 +1,22 @@
+#:kivy 1.11.1
+<MainScreen>:
+   BoxLayout:
+       orientation: 'vertical'
+       padding: 25
+       spacing: 10
+       BoxLayout:
+           size_hint: 1, 0.15
+           orientation: 'horizontal'
+           spacing: 10
+           Button:
+               text: 'Sentiment analysis'
+           Button:
+               text: 'Get rhymes'
+       ScrollView:
+           id: scrlv
+           size_hint: 1, 0.65
+           TextInput:
+               id: poem_text
+               text: 'Cellar door'
+               size_hint: 1, None
+               height: max(self.minimum_height, scrlv.height)
